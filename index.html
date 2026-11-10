@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Brandon Hicks AI Solutions — AI Employee Systems for Local Small Businesses</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c2733; background: #f6f7f9; line-height: 1.55; }
+  a { text-decoration: none; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  .nav { background: #0f2a44; color: #fff; }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-size: 19px; font-weight: 800; letter-spacing: .2px; }
+  .brand small { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #9fb3c8; }
+  .nav-cta { background: #e8833a; color: #fff; font-weight: 700; font-size: 14px; padding: 10px 18px; border-radius: 8px; }
+
+  /* Hero */
+  .hero { background: #0f2a44; color: #fff; padding: 56px 0 64px; }
+  .biz-head { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; margin-bottom: 40px; }
+  .biz-head img { width: 240px; height: 240px; border-radius: 50%; border: 4px solid #24405e; flex-shrink: 0; }
+  .biz-name { font-size: 46px; font-weight: 800; line-height: 1.15; }
+  .slogan { font-size: 24px; color: #e8833a; font-weight: 700; margin: 10px 0 8px; }
+  .biz-sub { font-size: 16px; color: #9fb3c8; }
+  .hero h1 { font-size: 46px; line-height: 1.12; font-weight: 800; max-width: 640px; }
+  .hero p.lede { font-size: 18px; color: #c9d6e3; max-width: 620px; margin: 18px 0 28px; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .btn-primary { background: #e8833a; color: #fff; font-weight: 700; font-size: 16px; padding: 14px 26px; border-radius: 10px; }
+  .btn-ghost { border: 1.5px solid #5b7a99; color: #fff; font-weight: 700; font-size: 16px; padding: 13px 24px; border-radius: 10px; }
+  .hero-note { margin-top: 16px; font-size: 13px; color: #9fb3c8; }
+
+  /* Hero video — embedded, autoplays (muted, loop) when built */
+  .hero-video { margin-top: 36px; background: #0a1e32; border: 1px solid #24405e; border-radius: 14px; overflow: hidden; }
+  .video-frame { position: relative; height: 580px; background: linear-gradient(135deg, #16324e, #0a1e32); display: flex; align-items: center; justify-content: center; }
+  .video-frame .scene { text-align: center; color: #c9d6e3; font-size: 15px; padding: 0 40px; }
+  .video-frame .scene b { color: #fff; font-size: 19px; display: block; margin-bottom: 6px; }
+  .progress { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: #24405e; }
+  .progress i { display: block; height: 100%; width: 32%; background: #e8833a; }
+  .video-cap { padding: 14px 18px; font-size: 14px; color: #c9d6e3; border-top: 1px solid #24405e; }
+  .video-cap b { color: #fff; }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section h2 { font-size: 30px; font-weight: 800; margin-bottom: 8px; color: #0f2a44; }
+  section .sub { font-size: 17px; color: #4a5a6a; max-width: 680px; margin-bottom: 32px; }
+  .modes { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .mode { background: #fff; border: 1px solid #dde3e9; border-radius: 10px; padding: 12px 18px; font-weight: 700; font-size: 14px; color: #0f2a44; }
+  .mode span { color: #e8833a; }
+
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .card { background: #fff; border: 1px solid #dde3e9; border-radius: 14px; padding: 22px; }
+  .card .icon { font-size: 26px; margin-bottom: 10px; }
+  .card h3 { font-size: 17px; margin-bottom: 6px; color: #0f2a44; }
+  .card p { font-size: 14px; color: #4a5a6a; }
+
+  /* Why it matters */
+  .why { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .why-point { background: #fff; border: 1px solid #dde3e9; border-radius: 14px; padding: 24px; }
+  .why-point h3 { font-size: 18px; color: #0f2a44; margin-bottom: 6px; }
+  .why-point p { font-size: 15px; color: #4a5a6a; }
+  .why-lede { font-size: 18px; color: #1c2733; max-width: 760px; margin-bottom: 28px; }
+  .why-lede b { color: #0f2a44; }
+
+  /* Meet Brandi */
+  .meet { background: #0f2a44; color: #fff; border-radius: 16px; padding: 36px; }
+  .meet h2 { color: #fff; }
+  .meet p { color: #c9d6e3; font-size: 17px; max-width: 700px; }
+  .meet p + p { margin-top: 12px; }
+  .meet b { color: #e8833a; }
+
+  /* Handoff */
+  .handoff { background: #0f2a44; color: #fff; border-radius: 16px; padding: 36px; }
+  .handoff h2 { color: #fff; }
+  .handoff p { color: #c9d6e3; font-size: 17px; max-width: 700px; }
+  .handoff .brief { margin-top: 22px; background: #0a1e32; border: 1px solid #24405e; border-radius: 10px; padding: 18px 20px; font-size: 14px; color: #c9d6e3; }
+  .handoff .brief b { color: #e8833a; }
+
+  /* Bottom video — embedded, click to play when built */
+  .watch { max-width: 860px; margin: 0 auto; }
+  .watch .frame { position: relative; height: 457px; background: linear-gradient(135deg, #16324e, #0a1e32); border-radius: 14px; display: flex; align-items: center; justify-content: center; }
+  .watch .play { width: 64px; height: 64px; border-radius: 50%; background: #e8833a; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff; }
+  .watch .cap { text-align: center; font-size: 15px; color: #4a5a6a; margin-top: 14px; }
+  .demo-link { display: inline-block; margin-top: 20px; font-weight: 700; color: #0f2a44; border-bottom: 2px solid #e8833a; padding-bottom: 2px; }
+  .center { text-align: center; }
+
+  /* Local */
+  .local { display: flex; gap: 24px; align-items: center; background: #fff; border: 1px solid #dde3e9; border-radius: 16px; padding: 32px; }
+  .avatar { width: 96px; height: 96px; border-radius: 50%; background: #0f2a44; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 34px; font-weight: 800; flex-shrink: 0; }
+  .local h3 { font-size: 21px; color: #0f2a44; margin-bottom: 6px; }
+  .local p { font-size: 15px; color: #4a5a6a; }
+
+  /* Contact */
+  .contact { background: #0f2a44; color: #fff; text-align: center; }
+  .contact h2 { color: #fff; }
+  .contact p { color: #c9d6e3; font-size: 17px; max-width: 560px; margin: 0 auto 28px; }
+  .contact .phone { font-size: 30px; font-weight: 800; color: #fff; }
+  .contact .rows { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+  .contact .rows a { background: #16324e; border: 1px solid #24405e; color: #fff; font-weight: 700; padding: 12px 20px; border-radius: 10px; font-size: 15px; }
+  footer { padding: 24px 0 40px; text-align: center; font-size: 13px; color: #7a8a99; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="brand">Brandon Hicks AI Solutions<small>AI Employee Systems</small></div>
+    <a class="nav-cta" href="tel:+13045139808">Contact for pricing</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="biz-head">
+      <img src="brandon-headshot.png" alt="Brandon Hicks">
+      <div>
+        <div class="biz-name">Brandon Hicks AI Solutions</div>
+        <div class="slogan">“I don't just use AI, I build it — for you.”</div>
+        <div class="biz-sub">AI Employee systems for local small businesses &middot; Charleston, WV</div>
+      </div>
+    </div>
+
+    <div class="hero-video">
+      <video src="brandi-promo-medical-v3.mp4" autoplay muted loop playsinline style="display:block;width:100%;height:580px;object-fit:cover;background:#0a1e32"></video>
+      <div class="video-cap"><b>In 40 seconds:</b> the call, the booking, the follow-up — and knowing when to hand it to you.</div>
+    </div>
+
+    <h1 style="margin-top:40px">Your front desk, answered every time.</h1>
+    <p class="lede">An AI employee that answers every call, books appointments, follows up every lead, and hands off to you with a full brief — so no customer ever gets a voicemail again.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:+13045139808">Call (304) 513-9808</a>
+      <a class="btn-ghost" href="#contact">Contact for pricing</a>
+    </div>
+    <div class="hero-note">No prices listed — every setup is quoted for your business.</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>What the AI Employee does</h2>
+    <p class="sub">One system that covers the front desk work small businesses lose customers over.</p>
+    <div class="grid">
+      <div class="card"><div class="icon">&#9742;</div><h3>Answers every call</h3><p>No more missed calls, no more voicemail. Every caller gets a real answer, day or night.</p></div>
+      <div class="card"><div class="icon">&#128197;</div><h3>Books appointments</h3><p>Checks your calendar and books the visit while the caller is still on the line.</p></div>
+      <div class="card"><div class="icon">&#8635;</div><h3>Follows up every lead</h3><p>Chases the leads that go quiet — calls, texts, and reminders until they book or say no.</p></div>
+      <div class="card"><div class="icon">&#9993;</div><h3>Sorts your inbox</h3><p>Triage, replies, and flags what actually needs you, so the inbox stops running your day.</p></div>
+    </div>
+    <div class="modes">
+      <div class="mode"><span>&#9679;</span> Overflow — covers you when the phones are busy</div>
+      <div class="mode"><span>&#9679;</span> After-hours — answers when you're closed</div>
+      <div class="mode"><span>&#9679;</span> Assist — works alongside your team</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Why it matters for a small business</h2>
+    <p class="why-lede">Most small businesses lose work to a phone that rings out. <b>A missed call is a customer who calls the next business on the list</b> — they rarely leave a voicemail. The AI Employee makes sure that call gets answered, booked, and followed up, even when you're on another job, closed for the day, or short-handed.</p>
+    <div class="why">
+      <div class="why-point"><h3>No more lost jobs to voicemail</h3><p>Every caller gets a real answer and a booked appointment — nights, weekends, and while you're working.</p></div>
+      <div class="why-point"><h3>You don't need a full-time receptionist</h3><p>It covers the front desk so a small team sounds like a big one, without a full-time salary on the books.</p></div>
+      <div class="why-point"><h3>Leads stop slipping away</h3><p>The follow-up is where most jobs are won or lost. It chases every lead until it books or says no.</p></div>
+      <div class="why-point"><h3>You stay in control</h3><p>When a call needs a human, it hands it to you with a full brief — you never walk in cold.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="meet">
+      <h2>Meet Brandi — Your AI Employee</h2>
+      <p>The system has a name: <b>Brandi</b>. She's the AI employee that does all of this — she answers the calls, books the appointments, follows up the leads, and hands off to you with a full brief.</p>
+      <p>You don't talk to a phone menu or a robot voice. You talk to Brandi, and she talks to your customers like a member of your team.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="handoff">
+      <h2>The warm handoff</h2>
+      <p>Brandi doesn't just take messages. When a caller asks for you, sounds unhappy, or the request needs a human, she hands the call to you — with a full brief, so you walk in knowing everything.</p>
+      <div class="brief"><b>Example brief:</b> “Sarah Miller called about a furnace repair. She wants Thursday morning. She mentioned the unit is 12 years old and making a grinding noise. She asked for a callback before 5 PM.”</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="center">How it works, start to finish</h2>
+    <p class="sub center" style="margin-left:auto;margin-right:auto">A real call, handled by the system — the booking, and the brief it leaves you.</p>
+    <div class="watch">
+      <video src="brandi-demo-assist.mp4" controls preload="metadata" poster="demo-poster.jpg" style="display:block;width:100%;height:457px;object-fit:cover;background:#0a1e32;border-radius:14px"></video>
+      <div class="cap">Recorded from the live system, with audio narration.</div>
+      <div class="center"><a class="demo-link" href="https://ai-employee-demo.streamlit.app" target="_blank">Try the live interactive demo &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="local">
+      <div class="avatar">BH</div>
+      <div>
+        <h3>Built by a local, not a call center</h3>
+        <p>Brandon Hicks — Network Architect &amp; AI Engineer, Charleston, WV. “I don't just use AI, I build it — for you.” Brandi is built and run by one person here in West Virginia, for businesses here in West Virginia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Contact for pricing</h2>
+    <p>Every business is different, so every setup is quoted for that business. Call or message — tell me what your front desk looks like now, and I'll tell you what Brandi would do for it.</p>
+    <div class="phone">(304) 513-9808</div>
+    <div class="rows">
+      <a href="https://www.facebook.com/profile.php?id=61596037455603" target="_blank">Facebook: Brandon Hicks AI Solutions</a>
+      <a href="tel:+13045139808">Call now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Brandi — Your AI Employee &middot; Brandon Hicks AI Solutions &middot; Charleston, WV
+</footer>
+
+</body>
+</html>
