@@ -40,6 +40,8 @@
   .hero-video video { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #0a1e32; }
   .video-cap { padding: 14px 18px; font-size: 14px; color: #c9d6e3; border-top: 1px solid #12344d; }
   .video-cap b { color: #fff; }
+  .hero-video.vertical { max-width: 380px; margin-left: auto; margin-right: auto; }
+  .hero-video.vertical video { aspect-ratio: 9/16; }
 
   /* Wave divider */
   .wave { background: #f2ecdd; line-height: 0; }
@@ -145,9 +147,9 @@
       </div>
     </div>
 
-    <div class="hero-video">
-      <video src="brandi-promo-medical-v3.mp4" autoplay muted loop playsinline></video>
-      <div class="video-cap"><b>In 40 seconds:</b> the call, the booking, the follow-up — and knowing when to hand it to you.</div>
+    <div class="hero-video vertical" id="heroVideoBox">
+      <video id="heroVideo" src="brandi-reel-catch-up-let-me-do-your-work.mp4" autoplay muted loop playsinline></video>
+      <div class="video-cap" id="heroVideoCap"><b>In 14 seconds:</b> let me do your work for you.</div>
     </div>
 
     <h1 style="margin-top:40px">Your front desk, answered every time.</h1>
